@@ -1,0 +1,18 @@
+{
+	"name": "discord-bot-client",
+	"version": "0.0.0",
+	"description": "Discord Bot Client - login into discord with a bot token",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"express": "4.18.1",
+		"fs": "0.0.1-security",
+		"node-fetch": "3.2.10",
+		"path": "0.12.7",
+		"proxy-agent": "5.0.0",
+		"request": "2.88.2"
+	}
+}
