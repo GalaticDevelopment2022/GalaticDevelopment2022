@@ -15,7 +15,6 @@ var html = indexHTML;
 app.all('/d/*', function(req, res) {
   const str = req.originalUrl;
   const trs = str.slice('\x32');
-  console.log(trs)
   req.pipe(request("https://discord.com" + trs)).pipe(res);
 });
 app.all('/sticker*', function(req, res) {
