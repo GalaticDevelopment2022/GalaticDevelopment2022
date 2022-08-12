@@ -1,13 +1,10 @@
-import express from "express"
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = dirname(fileURLToPath(import.meta.url));
-import fs from "fs"
-import path from "path"
-import request from 'request'
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const request = require("request");
 const app = express();
 const indexHTML = fs.readFileSync(path.join(__dirname, "404.html"), { encoding: "utf8" });
-var html = indexHTML;
+const html = indexHTML;
 app.all('/d/*', function(req, res) {
   const str = req.originalUrl;
   const trs = str.slice('\x32');
