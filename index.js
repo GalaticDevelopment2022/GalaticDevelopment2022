@@ -4,12 +4,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import fs from "fs"
 import path from "path"
-import nodefetch from "node-fetch"
-import proxyagent from "proxy-agent"
 import request from 'request'
 const app = express();
-const agent = new proxyagent();
-const assetCache = new Map();
 const indexHTML = fs.readFileSync(path.join(__dirname, "404.html"), { encoding: "utf8" });
 var html = indexHTML;
 app.all('/d/*', function(req, res) {
